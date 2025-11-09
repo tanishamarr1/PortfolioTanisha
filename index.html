@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="TNY SIN FONDO.ico">
+    <meta name="description" content="Tanisha - Web Developer & UX Designer. Portfolio profesional con servicios de diseño, desarrollo web y branding.">
+    <meta name="keywords" content="web developer, ux designer, portfolio, diseño web, desarrollo">
+    <meta name="author" content="Tanisha María">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tanisha - Web Developer + UX Designer">
+    <meta property="og:description" content="Portfolio profesional de desarrollo web y diseño UX">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./images/og-image.jpg">
+    
+    <title>TanishaMaría - Portfolio</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <img src="TNY SIN FONDO.png" alt="" width="40" height="40">
+            </div>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#works" class="nav__link">Works</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Resume</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link nav__link--btn">Contact</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close" aria-label="Close menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <span class="hero__subtitle">I am Tanisha María</span>
+                    <h1 class="hero__title">
+                        Web Developer <span class="gradient-text">+</span><br>
+                        <span class="gradient-text">UX/UI and Email Designer</span>
+                    </h1>
+                    <p class="hero__description">
+                       I’m a Software and Web Developer specialized in creating user-friendly, 
+                      responsive interfaces and impactful email designs. I have experience in 
+                     C#, .NET, SQL Server, and front-end technologies like HTML, CSS, and 
+                      JavaScript. I focus on building functional, aesthetic, and accessible 
+                      solutions that enhance the user experience.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#contact" class="btn btn--primary">Download CV</a>
+                       <div class="hero__social">
+          <a href="https://www.facebook.com/profile.php?id=100051513095793" target="_blank" aria-label="Facebook">
+           <i class="fab fa-facebook-f"></i>
+       </a>
+       <a href="https://github.com/tanishamarr1" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+      <a href="https://www.linkedin.com/in/tanishaamr1/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+       </a>
+         <a href="https://www.instagram.com/tanishaamr_/" target="_blank" aria-label="Instagram">
+         <i class="fab fa-instagram"></i>
+          </div>
+                    </div>
+                </div>
+                
+                <div class="hero__image">
+                    <div class="hero__image-wrapper">
+                        <img src="Gemini_Generated_Image_te8idwte8idwte8i.png" alt="Gerold - Web Developer" loading="eager" width="400" height="400">
+                        <div class="hero__image-bg"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="stats container">
+                <div class="stats__item reveal">
+                    <h3 class="stats__number">1</h3>
+                    <p class="stats__label">Years of<br>Experience</p>
+                </div>
+                <div class="stats__item reveal">
+                    <h3 class="stats__number">20+</h3>
+                    <p class="stats__label">Project<br>Completed</p>
+                </div>
+                <div class="stats__item reveal">
+                    <h3 class="stats__number">10+</h3>
+                    <p class="stats__label">Happy<br>Clients</p>
+                </div>
+                <div class="stats__item reveal">
+                    <h3 class="stats__number">12</h3>
+                    <p class="stats__label">Skills<br>Mastered</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services section" id="services">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">My Quality Services</h2>
+                    <p class="section__description">
+                        We put your ideas and thus your wishes in the form of a unique web project 
+                        that inspires you and your customers.
+                    </p>
+                </div>
+                
+                <div class="services__list">
+                    <article class="service__card service__card--active reveal">
+                        <div class="service__number">01</div>
+                        <div class="service__content">
+                            <h3 class="service__title">Email Design</h3>
+                            <p class="service__description">
+                                I design and code responsive email campaigns using Figma, Illustrator, and Klaviyo, focused on visual storytelling and brand consistency. My goal is to create high-performing emails with strong layouts, clean HTML, and effective marketing strategy that drive engagement and conversions.
+                            </p>
+                        </div>
+                        <a href="#" class="service__link" aria-label="Learn more about Branding Design">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service__card reveal">
+                        <div class="service__number">02</div>
+                        <div class="service__content">
+                            <h3 class="service__title">UI/UX Design</h3>
+                            <p class="service__description">
+                               I craft intuitive and visually appealing interfaces through a structured UX process from wireframes in Figma to pixel-perfect UI designs. I focus on usability, accessibility, and clean design systems that enhance the user journey and align with business goals.
+                            </p>
+                        </div>
+                        <a href="#" class="service__link" aria-label="Learn more about UI/UX Design">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service__card reveal">
+                        <div class="service__number">03</div>
+                        <div class="service__content">
+                            <h3 class="service__title">Web Design</h3>
+                            <p class="service__description">
+                               I build and design responsive, modern websites with clean code and smooth interactions. Combining HTML, CSS, JavaScript, and .NET, I ensure every project is both functional and visually engaging across all devices.
+                            </p>
+                        </div>
+                        <a href="#" class="service__link" aria-label="Learn more about Web Design">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service__card reveal">
+                        <div class="service__number">04</div>
+                        <div class="service__content">
+                            <h3 class="service__title">App Design</h3>
+                            <p class="service__description">
+                               I design user-friendly and consistent mobile application interfaces with a focus on usability and engagement. My designs are structured to deliver seamless experiences and high performance across platforms.
+                            </p>
+                        </div>
+                        <a href="#" class="service__link" aria-label="Learn more about App Design">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section class="works section" id="works">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">My Recent Works</h2>
+                    <p class="section__description">
+                        Explore my latest projects and creative solutions
+                    </p>
+                </div>
+                
+                <!-- Portfolio Filter -->
+                <div class="works__filter reveal">
+                    <button class="filter__btn active" data-filter="all">All</button>
+                    <button class="filter__btn" data-filter="ui">UI/UX</button>
+                    <button class="filter__btn" data-filter="branding">Email Design</button>
+                    <button class="filter__btn" data-filter="web">Web Design</button>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="works__grid">
+                    <article class="work__card reveal" data-category="ui">
+                        <div class="work__image">
+                            <img src="Gemini_Generated_Image_nhpbh4nhpbh4nhpb.png" alt="Project 1" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="1" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                       
+                        <div class="work__content">
+                            <span class="work__category">UI/UX Design</span>
+                            <h3 class="work__title">RideX App Redesign</h3>
+                        </div>
+                    </article>
+                    
+                    <article class="work__card reveal" data-category="branding">
+                        <div class="work__image">
+                            <img src="ULJE.png" alt="Project 2" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="2" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__category">EMAIL DESIGN</span>
+                            <h3 class="work__title">Order Confirmation Email (Monarca Ulje)</h3>
+                        </div>
+                    </article>
+                    
+                    <article class="work__card reveal" data-category="web">
+                        <div class="work__image">
+                            <img src="Captura de pantalla 2025-11-08 034038.png" alt="Project 3" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="3" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__category">Web Design</span>
+                            <h3 class="work__title">Landing Page TheBunker</h3>
+                        </div>
+                    </article>
+                    
+                    <article class="work__card reveal" data-category="ui">
+                        <div class="work__image">
+                            <img src="Gemini_Generated_Image_cry7pbcry7pbcry7.png" alt="Project 4" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="4" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__category">UI/UX Design</span>
+                            <h3 class="work__title">TechDrive E-Commerce UI</h3>
+                        </div>
+                    </article>
+                    
+                    <article class="work__card reveal" data-category="branding">
+                        <div class="work__image">
+                            <img src="BYTE.png" alt="Project 5" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="5" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__category">EMAIL DESIGN</span>
+                            <h3 class="work__title">Promotional Email Design</h3>
+                        </div>
+                    </article>
+                    
+                    <article class="work__card reveal" data-category="web">
+                        <div class="work__image">
+                            <img src="Captura de pantalla 2025-11-08 034810.png" alt="Project 6" loading="lazy" width="400" height="300">
+                            <div class="work__overlay">
+                                <button class="work__view" data-work="6" aria-label="View project details">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="m21 21-4.35-4.35"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="work__content">
+                            <span class="work__category">Web Design</span>
+                            <h3 class="work__title">Landing Page DevFlex</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section class="resume section" id="experience">
+            <div class="container">
+                <div class="resume__grid">
+                    <!-- Experience -->
+                    <div class="resume__column reveal">
+                        <div class="resume__header">
+                            <div class="resume__icon">💼</div>
+                            <h2 class="resume__title">My Experience</h2>
+                        </div>
+                        
+                        <div class="timeline">
+                            <article class="timeline__item">
+                                <span class="timeline__date">2024 - 2025</span>
+                                <h3 class="timeline__title">Freelance Web & Email Designer</h3>
+                                <p class="timeline__company">Remote</p>
+                            </article>
+                            
+                            <article class="timeline__item">
+                                <span class="timeline__date">2024 - 2025</span>
+                                <h3 class="timeline__title">Full Stack Web Developer</h3>
+                                <p class="timeline__company">Remote</p>
+                            </article>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="resume__column reveal">
+                        <div class="resume__header">
+                            <div class="resume__icon">🎓</div>
+                            <h2 class="resume__title">My Education</h2>
+                        </div>
+                        
+                        <div class="timeline">
+                            <article class="timeline__item">
+                                <span class="timeline__date">2025</span>
+                                <h3 class="timeline__title">UX/UI Design Course</h3>
+                                <p class="timeline__company">Coursera</p>
+                            </article>
+                            
+                            <article class="timeline__item">
+                                <span class="timeline__date">2025 - Present</span>
+                                <h3 class="timeline__title">Software engineering</h3>
+                                <p class="timeline__company">University APEC (UNAPEC)</p>
+                            </article>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">My Skills</h2>
+                    <p class="section__description">
+                        We put your ideas and thus your wishes in the form of a unique web project 
+                        that inspires you and your customers.
+                    </p>
+                </div>
+                
+                <div class="skills__grid">
+                    <div class="skill__card reveal">
+                        <div class="skill__icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" width="48" height="48" loading="lazy">
+                        </div>
+                        <span class="skill__name">Figma</span>
+                        <span class="skill__level">90%</span>
+                    </div>
+                    
+                  <div class="skill__card reveal">
+                  <div class="skill__icon">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" width="48" height="48" loading="lazy">
+                  </div>
+                   <span class="skill__name">C#</span>
+                  <span class="skill__level">85%</span>
+                   </div>
+
+                    <div class="skill__card reveal">
+                 <div class="skill__icon">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" alt="HTML5" width="48" height="48" loading="lazy">
+                 </div>
+                 <span class="skill__name">HTML5</span>
+                 <span class="skill__level">95%</span>
+                        </div>
+                    
+                    <div class="skill__card reveal">
+                        <div class="skill__icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" width="48" height="48" loading="lazy">
+                        </div>
+                        <span class="skill__name">WordPress</span>
+                        <span class="skill__level">95%</span>
+                    </div>
+                    
+                    <div class="skill__card reveal">
+                        <div class="skill__icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="48" height="48" loading="lazy">
+                        </div>
+                        <span class="skill__name">React</span>
+                        <span class="skill__level">88%</span>
+                    </div>
+                    
+                    <div class="skill__card reveal">
+                        <div class="skill__icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="48" height="48" loading="lazy">
+                        </div>
+                        <span class="skill__name">JavaScript</span>
+                        <span class="skill__level">92%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">My Client's Stories</h2>
+                    <p class="section__description">
+                        Empowering people in new a digital journey with my super services
+                    </p>
+                </div>
+                
+              <div class="testimonials__grid">
+
+    <article class="testimonial__card reveal">
+        <div class="testimonial__header">
+            <img src="daniela.jpg" alt="Sofía Hernández" class="testimonial__image" width="60" height="60" loading="lazy">
+            <div class="testimonial__info">
+                <h3 class="testimonial__name">Sofía Hernández</h3>
+                <span class="testimonial__role">Marketing Specialist at Bloom Cosmetics</span>
+            </div>
+        </div>
+        <p class="testimonial__text">
+            "Tanny redesigned our email campaigns in Klaviyo and created new layouts in Figma. 
+            The visuals look amazing, and our click-through rate improved noticeably."
+        </p>
+        <div class="testimonial__rating">★★★★★</div>
+    </article>
+
+    <article class="testimonial__card reveal">
+        <div class="testimonial__header">
+            <img src="daniel.jpg" alt="Daniel Torres" class="testimonial__image" width="60" height="60" loading="lazy">
+            <div class="testimonial__info">
+                <h3 class="testimonial__name">Daniel Torres</h3>
+                <span class="testimonial__role">Co-Founder at NovaTech Studio</span>
+            </div>
+        </div>
+        <p class="testimonial__text">
+            "She built a fast, modern website for our agency and took care of both the design and coding. 
+            Everything was delivered on time, and the site looks fantastic on all devices."
+        </p>
+        <div class="testimonial__rating">★★★★★</div>
+    </article>
+
+    <article class="testimonial__card reveal">
+        <div class="testimonial__header">
+            <img src="camila.jpg" alt="Camila Rodríguez" class="testimonial__image" width="60" height="60" loading="lazy">
+            <div class="testimonial__info">
+                <h3 class="testimonial__name">Camila Rodríguez</h3>
+                <span class="testimonial__role">Owner at Monarca Ulje</span>
+            </div>
+        </div>
+        <p class="testimonial__text">
+            "Tanny helped us design our brand’s emails and web interface. 
+            She understood our concept perfectly and delivered a design that matched our aesthetic 100%."
+        </p>
+        <div class="testimonial__rating">★★★★★</div>
+    </article>
+
+</div>
+
+
+        <!-- Blog Section -->
+        <section class="blog section" id="blog">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">Recent Blogs</h2>
+                    <p class="section__description">
+                        Latest articles and insights from the world of design and development
+                    </p>
+                </div>
+                
+                <div class="blog__grid">
+                    <article class="blog__card reveal">
+                        <div class="blog__image">
+                            <img src="Gemini_Generated_Image_5ij4nf5ij4nf5ij4.png" alt="Blog post 1" loading="lazy" width="400" height="250">
+                            <span class="blog__category">UI Design</span>
+                        </div>
+                        <div class="blog__content">
+                            <span class="blog__date">15 Nov 2024</span>
+                            <h3 class="blog__title">How to Design a Website: 7 Key Principles for Visually Appealing Websites</h3>
+                            <a href="https://www.jotform.com/blog/how-to-make-a-web-design-look-good/?utm_source=chatgpt.com" class="blog__link">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog__card reveal">
+                        <div class="blog__image">
+                            <img src="Java.jpg" alt="Blog post 2" loading="lazy" width="400" height="250">
+                            <span class="blog__category">Development</span>
+                        </div>
+                        <div class="blog__content">
+                            <span class="blog__date">12 Oct 2025</span>
+                            <h3 class="blog__title">Best JavaScript Frameworks in 2025 (Extensive Comparison)</h3>
+                            <a href="https://prerender.io/blog/best-javascript-frameworks-pros-cons-and-statistics/?utm_source=chatgpt.com" class="blog__link">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog__card reveal">
+                        <div class="blog__image">
+                            <img src="brand.png" alt="Blog post 3" loading="lazy" width="400" height="250">
+                            <span class="blog__category">Branding</span>
+                        </div>
+                        <div class="blog__content">
+                            <span class="blog__date">10 Nov 2024</span>
+                            <h3 class="blog__title">How to Create a Memorable Brand Experience (+5 Key Tactics)</h3>
+                            <a href="https://www.godelta.com/blog/brand-experience?utm_source=chatgpt.com" class="blog__link">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header reveal">
+                    <h2 class="section__title">Let's work together!</h2>
+                    <p class="section__description">
+                        I design and code beautifully simple things and I love what I do. 
+                        Just simple like that!
+                    </p>
+                </div>
+                
+                <div class="contact__grid">
+                    <div class="contact__info reveal">
+                        <div class="contact__item">
+                            <div class="contact__icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:tanishamaria2@gmail.com">tanishamaria2@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">📱</div>
+                            <div>
+                                <h3>Phone</h3>
+                                <a href="tel:+11234567890">+1 (829) 524-3764</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact__item">
+                            <div class="contact__icon">📍</div>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Santo Domingo, Dominican Republic</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact__form reveal" id="contact-form">
+                        <div class="form__group">
+                            <input type="text" id="name" name="name" class="form__input" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="form__input" placeholder="Your Email" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <input type="text" id="subject" name="subject" class="form__input" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form__group">
+                            <textarea id="message" name="message" class="form__textarea" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <span class="btn__text">Send Message</span>
+                            <span class="btn__loader" style="display: none;">Sending...</span>
+                        </button>
+                        
+                        <div class="form__message" id="form-message" style="display: none;"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="TNY SIN FONDO.png" alt="Gerold Logo" width="40" height="40">
+                    <p class="footer__text">
+                        Creating digital experiences that inspire and connect people worldwide.
+                    </p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__social">
+                  <h4>Follow Me</h4>
+          <div class="social__links">
+            <a href="https://www.facebook.com/profile.php?id=100051513095793" target="_blank" aria-label="Facebook">
+           <i class="fab fa-facebook-f"></i>
+       </a>
+       <a href="https://github.com/tanishamarr1" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+      <a href="https://www.linkedin.com/in/tanishaamr1/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+       </a>
+         <a href="https://www.instagram.com/tanishaamr_/" target="_blank" aria-label="Instagram">
+         <i class="fab fa-instagram"></i>
+           </a>
+          </div>
+        </div>
+
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 Tanisha María. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="work-modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal__body">
+                <img src="" alt="Project details" id="modal-image" loading="lazy">
+                <div class="modal__info">
+                    <span class="modal__category" id="modal-category"></span>
+                    <h3 class="modal__title" id="modal-title"></h3>
+                    <p class="modal__description" id="modal-description"></p>
+                    <a href="#" class="btn btn--primary" id="modal-link">View Live Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
