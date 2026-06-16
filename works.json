@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "image": "https://i.postimg.cc/3wFT4BM7/Gemini-Generated-Image-nhpbh4nhpbh4nhpb.png",
+        "category": "UI/UX Design",
+        "category_slug": "ui",
+        "title": "RideX App Redesign",
+        "description": "A fresh redesign of the RideX ride-sharing app with a modern interface, smoother user flow, and intuitive interactions for a better travel experience.",
+        "link": "https://www.figma.com/design/L5Ly2nwmR0AQ8JICP2LOCI/RidexUX?node-id=0-1&t=NBrZyl6j94TLPKKC-1"
+    },
+    {
+        "id": "2",
+        "image": "https://i.postimg.cc/QxfStKY6/ULJE.png",
+        "category": "EMAIL DESIGN",
+        "category_slug": "branding",
+        "title": "Order Confirmation Email (Monarca Ulje)",
+        "description": "Elegant and minimal order confirmation email designed for Monarca Ulje. Focused on clear communication, visual harmony, and a premium customer experience.",
+        "link": "https://www.figma.com/design/CwVFAxUoPRNxwMKFQsLqj9/MONARCA-ULJE---EMAIL-DESIGN?node-id=0-1&t=tD7pxV5N5uQT6OnO-1"
+    },
+    {
+        "id": "3",
+        "image": "https://i.postimg.cc/c1Mn1q5G/Captura-de-pantalla-2025-11-08-034038.png",
+        "category": "Web Design",
+        "category_slug": "web",
+        "title": "Landing Page TheBunker",
+        "description": "Modern dark-themed landing page created for a tattoo brand. Focused on visual storytelling, bold typography, and a strong user experience.",
+        "link": "https://thebunker.vercel.app/"
+    },
+    {
+        "id": "4",
+        "image": "https://i.postimg.cc/bv9hDTXP/Gemini-Generated-Image-cry7pbcry7pbcry7.png",
+        "category": "UI/UX Design",
+        "category_slug": "ui",
+        "title": "TechDrive E-Commerce UI",
+        "description": "Modern e-commerce interface concept for a tech accessories brand. The design focuses on usability, dark aesthetics, and an intuitive shopping experience.",
+        "link": "https://www.figma.com/design/Coj3nzGYRWtqr9dXfMct7P/GamingUX?node-id=0-1&t=wB8ElYzp6ml7JVpq-1"
+    },
+    {
+        "id": "5",
+        "image": "https://i.postimg.cc/sfw59dPM/BYTE.png",
+        "category": "EMAIL DESIGN",
+        "category_slug": "branding",
+        "title": "Promotional Email Design",
+        "description": "Vibrant and engaging promotional email created to increase brand interaction and drive conversions through bold visuals and strategic CTA placement.",
+        "link": "https://www.figma.com/design/8mqBVgSLK0Zsxi3Sgh2zby/PROMOTIONAL-EMAIL-DESIGN?node-id=0-1&t=p1cStNGN0MX1MWFu-1"
+    },
+    {
+        "id": "6",
+        "image": "https://i.postimg.cc/PfzwfGFt/Captura-de-pantalla-2025-11-08-034810.png",
+        "category": "Web Design",
+        "category_slug": "web",
+        "title": "Landing Page DevFlex",
+        "description": "Built with HTML, CSS, and JavaScript. Fully responsive with clean code, smooth animations, and reusable components. Deployed on Vercel.",
+        "link": "https://dev-flex-jet.vercel.app/"
+    }
+]

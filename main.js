@@ -95,26 +95,26 @@
     scrollActive();
 
   
-    const filterButtons = document.querySelectorAll('.filter__btn');
-    const workCards = document.querySelectorAll('.work__card');
+    // ======== Portfolio Filter Logic ========
+    function initPortfolioFilters() {
+      const filterButtons = document.querySelectorAll('.filter__btn');
+      const workCards = document.querySelectorAll('.work__card');
 
-    if (filterButtons && filterButtons.length && workCards) {
+      if (!filterButtons.length || !workCards.length) return;
+
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
-
           const filterValue = button.getAttribute('data-filter');
 
           workCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
             if (filterValue === 'all' || cardCategory === filterValue) {
               card.classList.remove('hidden');
-              // Animate in
               card.style.opacity = '1';
               card.style.transform = 'translateY(0)';
             } else {
-              // Animate out then hide
               card.style.opacity = '0';
               card.style.transform = 'translateY(20px)';
               setTimeout(() => card.classList.add('hidden'), 300);
@@ -133,17 +133,8 @@
     const modalLink = document.getElementById('modal-link');
     const modalClose = document.querySelector('.modal__close');
     const modalOverlay = document.querySelector('.modal__overlay');
-    const workViewButtons = document.querySelectorAll('.work__view');
 
-    // Example work data (keep or replace by server/json)
-    const worksData = {
-      '1': { image: 'https://i.postimg.cc/3wFT4BM7/Gemini-Generated-Image-nhpbh4nhpbh4nhpb.png', category: 'UI/UX Design', title: 'RideX App Design', description: 'A fresh redesign of the RideX ride-sharing app with a modern interface, smoother user flow, and intuitive interactions for a better travel experience.', link: 'https://www.figma.com/design/L5Ly2nwmR0AQ8JICP2LOCI/RidexUX?node-id=0-1&t=NBrZyl6j94TLPKKC-1' },
-      '2': { image: 'https://i.postimg.cc/QxfStKY6/ULJE.png', category: 'Email Design', title: 'Order Confirmation Email', description: 'Elegant and minimal order confirmation email designed for Monarca Ulje. Focused on clear communication, visual harmony, and a premium customer experience.', link: 'https://www.figma.com/design/CwVFAxUoPRNxwMKFQsLqj9/MONARCA-ULJE---EMAIL-DESIGN?node-id=0-1&t=tD7pxV5N5uQT6OnO-1' }, 
-      '3': { image: 'https://i.postimg.cc/c1Mn1q5G/Captura-de-pantalla-2025-11-08-034038.png', category: 'Web Design', title: 'Landing Page TheBunker', description: 'Modern dark-themed landing page created for a tattoo brand. Focused on visual storytelling, bold typography, and a strong user experience.', link: 'https://thebunker.vercel.app/' },
-      '4': { image: 'https://i.postimg.cc/bv9hDTXP/Gemini-Generated-Image-cry7pbcry7pbcry7.png', category: 'UI/UX Design', title: 'TechDrive E-Commerce UI', description: 'Modern e-commerce interface concept for a tech accessories brand. The design focuses on usability, dark aesthetics, and an intuitive shopping experience.', link: 'https://www.figma.com/design/Coj3nzGYRWtqr9dXfMct7P/GamingUX?node-id=0-1&t=wB8ElYzp6ml7JVpq-1' },
-      '5': { image: 'https://i.postimg.cc/sfw59dPM/BYTE.png', category: 'Email Design', title: 'Promotional Email Design', description: 'Vibrant and engaging promotional email created to increase brand interaction and drive conversions through bold visuals and strategic CTA placement.', link: 'https://www.figma.com/design/8mqBVgSLK0Zsxi3Sgh2zby/PROMOTIONAL-EMAIL-DESIGN?node-id=0-1&t=p1cStNGN0MX1MWFu-1' },
-      '6': { image: 'https://i.postimg.cc/PfzwfGFt/Captura-de-pantalla-2025-11-08-034810.png', category: 'Web Design', title: 'Landing Page Design DevFlex', description: 'Built with HTML, CSS, and JavaScript. Fully responsive with clean code, smooth animations, and reusable components. Deployed on Vercel.', link: 'https://dev-flex-jet.vercel.app/' }
-    };
+    let worksData = {}; // Will be populated by fetch
 
     function openModalWithData(workData) {
       if (!modal) return;
@@ -166,7 +157,8 @@
       document.body.style.overflow = '';
     }
 
-    if (workViewButtons && workViewButtons.length) {
+    function initWorkModalButtons() {
+      const workViewButtons = document.querySelectorAll('.work__view');
       workViewButtons.forEach(button => {
         button.addEventListener('click', (e) => {
           e.preventDefault();
@@ -307,10 +299,88 @@
       document.body.appendChild(script);
     }
 
-    // ======== Load Blogs Dynamically ========
-    const blogGrid = document.getElementById('blog-grid');
+    // ======== Data Fetching Functions ========
+    
+    async function fetchWorks() {
+      const grid = document.getElementById('works-grid');
+      if (!grid) return;
+      try {
+        const res = await fetch('works.json');
+        const works = await res.json();
+        
+        // Update the global worksData object for the modal
+        works.forEach(w => worksData[w.id] = w);
+
+        grid.innerHTML = works.map(w => `
+          <article class="work__card reveal" data-category="${w.category_slug}">
+            <div class="work__image">
+              <img src="${w.image}" alt="${w.title}" loading="lazy" width="400" height="300">
+              <div class="work__overlay">
+                <button class="work__view" data-work="${w.id}" aria-label="View project details">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="work__content">
+              <span class="work__category">${w.category}</span>
+              <h3 class="work__title">${w.title}</h3>
+            </div>
+          </article>
+        `).join('');
+        
+        initPortfolioFilters();
+        initWorkModalButtons();
+        reveal();
+      } catch (e) { console.error('Error works:', e); }
+    }
+
+    async function fetchResume() {
+      const expList = document.getElementById('experience-list');
+      const eduList = document.getElementById('education-list');
+      if (!expList || !eduList) return;
+      try {
+        const res = await fetch('resume.json');
+        const data = await res.json();
+        
+        const template = (item) => `
+          <article class="timeline__item">
+            <span class="timeline__date">${item.date}</span>
+            <h3 class="timeline__title">${item.title}</h3>
+            <p class="timeline__company">${item.company}</p>
+          </article>
+        `;
+        
+        expList.innerHTML = data.experience.map(template).join('');
+        eduList.innerHTML = data.education.map(template).join('');
+        reveal();
+      } catch (e) { console.error('Error resume:', e); }
+    }
+
+    async function fetchSkills() {
+      const grid = document.getElementById('skills-grid');
+      if (!grid) return;
+      try {
+        const res = await fetch('skills.json');
+        const skills = await res.json();
+        
+        grid.innerHTML = skills.map(s => `
+          <div class="skill__card reveal">
+            <div class="skill__icon">
+              <img src="${s.icon}" alt="${s.name}" width="48" height="48" loading="lazy">
+            </div>
+            <span class="skill__name">${s.name}</span>
+            <span class="skill__level">${s.level}</span>
+          </div>
+        `).join('');
+        reveal();
+      } catch (e) { console.error('Error skills:', e); }
+    }
 
     async function fetchBlogs() {
+      const blogGrid = document.getElementById('blog-grid');
       if (!blogGrid) return;
       
       try {
@@ -339,6 +409,10 @@
       }
     }
 
+    // Init all fetches
+    fetchWorks();
+    fetchResume();
+    fetchSkills();
     fetchBlogs();
 
     // Optional: console message

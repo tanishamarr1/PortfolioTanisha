@@ -1,0 +1,26 @@
+{
+    "experience": [
+        {
+            "date": "2024 - 2025",
+            "title": "Freelance Web & Email Designer",
+            "company": "Remote"
+        },
+        {
+            "date": "2024 - 2025",
+            "title": "Full Stack Web Developer",
+            "company": "Remote"
+        }
+    ],
+    "education": [
+        {
+            "date": "2025",
+            "title": "UX/UI Design Course",
+            "company": "Coursera"
+        },
+        {
+            "date": "2025 - Present",
+            "title": "Software Engineering",
+            "company": "University APEC (UNAPEC)"
+        }
+    ]
+}
