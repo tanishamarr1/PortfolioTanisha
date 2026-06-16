@@ -307,6 +307,40 @@
       document.body.appendChild(script);
     }
 
+    // ======== Load Blogs Dynamically ========
+    const blogGrid = document.getElementById('blog-grid');
+
+    async function fetchBlogs() {
+      if (!blogGrid) return;
+      
+      try {
+        const response = await fetch('blogs.json');
+        if (!response.ok) throw new Error('Error al cargar blogs.json');
+        const blogs = await response.json();
+
+        blogGrid.innerHTML = blogs.map(blog => `
+          <article class="blog__card reveal">
+            <div class="blog__image">
+              <img src="${blog.image}" alt="${blog.title}" loading="lazy" width="400" height="250">
+              <span class="blog__category">${blog.category}</span>
+            </div>
+            <div class="blog__content">
+              <span class="blog__date">${blog.date}</span>
+              <h3 class="blog__title">${blog.title}</h3>
+              <a href="${blog.link}" class="blog__link">Read More →</a>
+            </div>
+          </article>
+        `).join('');
+
+        // Re-run reveal to detect newly added items
+        reveal();
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    }
+
+    fetchBlogs();
+
     // Optional: console message
     console.log('%c Portfolio website loaded successfully!', 'color: #9B5CFF; font-weight: bold;');
   }); // DOMContentLoaded
